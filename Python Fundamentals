@@ -1,0 +1,117 @@
+
+# 1. Keywords in Python
+# Keywords are reserved words in Python that have predefined meanings and cannot be used as variable names.
+# Some common Python keywords are: False, True, None, and, or, not, if, else, elif, for, while, break, continue,
+# return, def, class, try, except, finally, import, from, global, nonlocal, pass, raise, with, in, is
+
+# Example of keyword usage:
+if True:
+    print("This is a keyword example.")
+
+
+# 2. Identifiers
+# Identifiers are names given to variables, functions, classes, and objects. They must:
+# - Begin with a letter (a-z, A-Z) or an underscore (_)
+# - Only contain letters, numbers, and underscores
+# - Not be a Python keyword
+# - Be case-sensitive
+
+# Example of valid identifiers:
+variable_name = 10  # Valid identifier
+_variable = 20      # Valid identifier
+
+
+# 3. Variables in Python
+# A variable is a name that refers to a value. Variables are created when you assign a value using the = operator.
+
+# Example:
+name = "John"      # String variable
+age = 25           # Integer variable
+price = 19.99      # Float variable
+is_active = True   # Boolean variable
+
+print(name, age, price, is_active)
+
+
+# 4. Fundamental Data Types in Python
+# Python has several built-in data types used to store different kinds of values. Common ones are:
+
+# 1. Integer (int) - Represents whole numbers, positive or negative.
+age = 30
+print(type(age))  # Output: <class 'int'>
+
+# 2. Float (float) - Represents decimal numbers.
+temperature = 36.6
+print(type(temperature))  # Output: <class 'float'>
+
+# 3. String (str) - Represents a sequence of characters enclosed in single or double quotes.
+greeting = "Hello, World!"
+print(type(greeting))  # Output: <class 'str'>
+
+# 4. Boolean (bool) - Represents two values: True or False.
+is_logged_in = False
+print(type(is_logged_in))  # Output: <class 'bool'>
+
+# 5. List - An ordered collection of items that can be changed (mutable).
+fruits = ["apple", "banana", "cherry"]
+print(type(fruits))  # Output: <class 'list'>
+
+# 6. Dictionary (dict) - A collection of key-value pairs.
+person = {"name": "Alice", "age": 25}
+print(type(person))  # Output: <class 'dict'>
+
+
+# 5. Working with Operators
+# Python provides several types of operators that allow you to perform operations on variables and values.
+
+# 1. Arithmetic Operators - Used to perform mathematical operations.
+a = 10
+b = 3
+print(a + b)  # Addition: 13
+print(a - b)  # Subtraction: 7
+print(a * b)  # Multiplication: 30
+print(a / b)  # Division: 3.3333
+print(a % b)  # Modulus: 1
+print(a ** b) # Exponentiation: 1000
+print(a // b) # Floor Division: 3
+
+# 2. Comparison Operators - Used to compare two values.
+x = 5
+y = 10
+print(x == y)  # False
+print(x != y)  # True
+print(x > y)   # False
+print(x < y)   # True
+
+# 3. Logical Operators - Used to combine conditional statements.
+a = True
+b = False
+print(a and b)  # False
+print(a or b)   # True
+print(not a)    # False
+
+
+# 6. Taking Input and Output from the Users
+# Taking Input from the User:
+# In Python, you can use the input() function to take input from the user. The input is always received as a string,
+# and you may need to convert it to other data types (like int or float).
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))  # Converting input to integer
+
+# Output to the User:
+# In Python, the print() function is used to display output.
+
+greeting = "Welcome to Python!"
+print(greeting)  # Output: Welcome to Python!
+
+
+# Complete Example:
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+# Performing some operations
+next_year_age = age + 1
+
+# Displaying output
+print(f"Hello, {name}! Next year, you will be {next_year_age} years old.")
