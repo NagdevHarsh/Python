@@ -1,0 +1,108 @@
+# Common String Methods in Python
+
+# Python provides many methods for working with strings, allowing you to perform
+# operations like changing case, searching for substrings, replacing characters, and more.
+
+# 1. len(): Get Length of the String
+# The len() function returns the number of characters in a string, including spaces and punctuation.
+message = "Hello, World!"
+print(len(message))  # Output: 13
+
+# 2. upper(): Convert to Uppercase
+# The upper() method returns a new string with all characters converted to uppercase.
+text = "python programming"
+print(text.upper())  # Output: PYTHON PROGRAMMING
+
+# 3. lower(): Convert to Lowercase
+# The lower() method returns a new string with all characters converted to lowercase.
+text = "HELLO WORLD"
+print(text.lower())  # Output: hello world
+
+# 4. capitalize(): Capitalize the First Character
+# The capitalize() method returns a new string with the first character in uppercase and the rest in lowercase.
+text = "python is fun"
+print(text.capitalize())  # Output: Python is fun
+
+# 5. title(): Convert to Title Case
+# The title() method capitalizes the first letter of every word in the string.
+text = "python programming language"
+print(text.title())  # Output: Python Programming Language
+
+# 6. strip(): Remove Leading and Trailing Spaces
+# The strip() method removes leading and trailing whitespace characters.
+# lstrip() removes leading spaces, and rstrip() removes trailing spaces.
+text = "   Hello, World!   "
+print(text.strip())    # Output: "Hello, World!"
+print(text.lstrip())   # Output: "Hello, World!   "
+print(text.rstrip())   # Output: "   Hello, World!"
+
+# 7. replace(): Replace Substring
+# The replace() method returns a new string where all occurrences of a specified substring are replaced with another substring.
+text = "I love Python"
+new_text = text.replace("Python", "coding")
+print(new_text)  # Output: I love coding
+
+# 8. split(): Split String into List
+# The split() method splits a string into a list of substrings based on a specified delimiter (space by default).
+text = "Python is fun"
+words = text.split()
+print(words)  # Output: ['Python', 'is', 'fun']
+
+# You can also specify a delimiter:
+text = "apple,banana,orange"
+fruits = text.split(',')
+print(fruits)  # Output: ['apple', 'banana', 'orange']
+
+# 9. join(): Join List into String
+# The join() method concatenates elements of an iterable (like a list or tuple) into a single string with a specified separator.
+words = ["Python", "is", "fun"]
+sentence = " ".join(words)
+print(sentence)  # Output: Python is fun
+
+# 10. find(): Find Substring
+# The find() method searches for a substring within a string and returns the index of the first occurrence.
+# If the substring is not found, it returns -1.
+text = "I love Python"
+index = text.find("Python")
+print(index)  # Output: 7
+
+not_found = text.find("Java")
+print(not_found)  # Output: -1
+
+# 11. count(): Count Substring Occurrences
+# The count() method returns the number of times a substring appears in the string.
+text = "banana"
+print(text.count('a'))  # Output: 3
+
+# 12. startswith(), endswith(): Check Start and End
+# startswith(): Checks if a string starts with a specific substring.
+# endswith(): Checks if a string ends with a specific substring.
+text = "Hello, World!"
+print(text.startswith("Hello"))  # Output: True
+print(text.endswith("World!"))   # Output: True
+
+# Practical Examples
+
+# Example 1: Basic String Manipulation
+name = "alice"
+greeting = f"Hello, {name.capitalize()}!"
+print(greeting)  # Output: Hello, Alice!
+
+# Example 2: Using Multiple String Methods
+text = " Python is amazing! "
+new_text = text.strip().replace("Python", "Programming").upper()
+print(new_text)  # Output: PROGRAMMING IS AMAZING!
+
+# Example 3: Counting Words in a Sentence
+sentence = "Python is fun, and Python is easy to learn."
+word_count = sentence.count("Python")
+print(f"'Python' appears {word_count} times in the sentence.")
+# Output: 'Python' appears 2 times in the sentence.
+
+# Example 4: Splitting and Joining Strings
+text = "apple,banana,orange"
+fruits = text.split(",")   # Splitting string into list
+print(fruits)              # Output: ['apple', 'banana', 'orange']
+
+new_text = "-".join(fruits)  # Joining list into string
+print(new_text)             # Output: apple-banana-orange
