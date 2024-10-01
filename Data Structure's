@@ -28,3 +28,23 @@ print("Sorted list:", sorted(fruits))  # Temporary sorting: Output: ['apple', 'b
 fruits.reverse()
 print("Reversed list:", fruits)        # Output: ['orange', 'blueberry', 'apple']
 
+# 2. Tuple
+# A Tuple is an ordered, immutable collection of items. Once created, the elements of a tuple cannot be changed.
+# Tuples are defined using parentheses () and are used when you want a sequence of elements that should not be modified.
+# Since tuples are immutable, they can be more efficient than lists in certain cases.
+
+# Example: Creating a Tuple
+person = ("John", 25, "New York")
+
+# Accessing elements in a tuple by index
+print("Person name:", person[0])   # Output: John
+
+# Tuples are immutable, so you cannot change their elements directly
+# person[1] = 30  # This would raise an error
+
+# However, you can concatenate or slice them to create new tuples
+new_person = person + ("Engineer",)
+print("Extended tuple:", new_person)  # Output: ('John', 25, 'New York', 'Engineer')
+
+# Tuple methods include count() and index()
+print("Index of 'New York':", person.index("New York"))  # Output: 2
