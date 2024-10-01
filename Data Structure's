@@ -48,3 +48,29 @@ print("Extended tuple:", new_person)  # Output: ('John', 25, 'New York', 'Engine
 
 # Tuple methods include count() and index()
 print("Index of 'New York':", person.index("New York"))  # Output: 2
+
+# 3. Set
+# A Set is an unordered, mutable collection of unique items. Sets are defined using curly braces {}.
+# Since sets are unordered, they do not allow indexing, and duplicate elements are automatically removed.
+# Sets are useful when you want to store a collection of unique items and perform mathematical set operations like union, intersection, etc.
+
+# Example: Creating a Set
+colors = {"red", "green", "blue"}
+
+# Adding elements to the set
+colors.add("yellow")
+print("Set after adding yellow:", colors)  # Output: {'red', 'green', 'blue', 'yellow'}
+
+# Removing elements from the set
+colors.remove("green")
+print("Set after removing green:", colors)  # Output: {'red', 'blue', 'yellow'}
+
+# Adding a duplicate element has no effect (because sets do not allow duplicates)
+colors.add("red")
+print("Set after trying to add red again:", colors)  # Output: {'red', 'blue', 'yellow'}
+
+# Set operations: union, intersection
+colors2 = {"purple", "blue", "pink"}
+print("Union of sets:", colors.union(colors2))         # Output: {'red', 'blue', 'yellow', 'purple', 'pink'}
+print("Intersection of sets:", colors.intersection(colors2))  # Output: {'blue'}
+
