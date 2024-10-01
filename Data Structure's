@@ -74,3 +74,36 @@ colors2 = {"purple", "blue", "pink"}
 print("Union of sets:", colors.union(colors2))         # Output: {'red', 'blue', 'yellow', 'purple', 'pink'}
 print("Intersection of sets:", colors.intersection(colors2))  # Output: {'blue'}
 
+# 4. Dictionary
+# A Dictionary is an unordered collection of key-value pairs. Each key in a dictionary is unique, and the values can be accessed via their corresponding keys.
+# Dictionaries are defined using curly braces {}, with each key-value pair separated by a colon (:).
+# Dictionaries are mutable, which means that you can change their contents (add, modify, remove key-value pairs).
+
+# Example: Creating a Dictionary
+student = {
+    "name": "Alice",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Accessing values using keys
+print("Student name:", student["name"])   # Output: Alice
+
+# Modifying values in the dictionary
+student["age"] = 23
+print("Updated student dictionary:", student)  # Output: {'name': 'Alice', 'age': 23, 'major': 'Computer Science'}
+
+# Adding new key-value pairs to the dictionary
+student["graduation_year"] = 2025
+print("After adding graduation year:", student)  # Output: {'name': 'Alice', 'age': 23, 'major': 'Computer Science', 'graduation_year': 2025}
+
+# Removing key-value pairs from the dictionary
+del student["major"]
+print("After removing major:", student)   # Output: {'name': 'Alice', 'age': 23, 'graduation_year': 2025}
+
+# Dictionary methods include keys(), values(), and items() for working with the keys, values, and key-value pairs
+print("All keys:", student.keys())    # Output: dict_keys(['name', 'age', 'graduation_year'])
+print("All values:", student.values())  # Output: dict_values(['Alice', 23, 2025])
+
+# Complete Dictionary example
+print("Complete Dictionary:", student)
