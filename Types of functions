@@ -66,3 +66,27 @@ print(even_numbers)  # Outputs [2, 4]
 from functools import reduce
 sum_of_numbers = reduce(lambda x, y: x + y, numbers)
 print(sum_of_numbers)  # Outputs 10
+
+# Map without lambda
+def square(x):
+    return x * x
+
+numbers = [1, 2, 3, 4]
+squared_numbers = list(map(square, numbers))
+print(squared_numbers)  # Outputs [1, 4, 9, 16]
+
+# Filter without lambda
+def is_even(x):
+    return x % 2 == 0
+
+even_numbers = list(filter(is_even, numbers))
+print(even_numbers)  # Outputs [2, 4]
+
+# Reduce without lambda
+from functools import reduce
+
+def add(x, y):
+    return x + y
+
+sum_of_numbers = reduce(add, numbers)
+print(sum_of_numbers)  # Outputs 10
