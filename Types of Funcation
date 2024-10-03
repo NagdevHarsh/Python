@@ -1,0 +1,68 @@
+# Types of Functions
+# In Python, we can use built-in functions (like print, len) or create our own using 'def'.
+
+# User-defined function example
+def greet():
+    print("Hello, welcome to Python!")
+
+greet()
+
+# Types of Arguments
+# Python supports different types of arguments such as positional, keyword, default, and variable-length.
+
+# Positional & Default Arguments
+def display_info(name, age=18):
+    print(f"Name: {name}, Age: {age}")
+
+display_info("Alice")  # Uses default age
+display_info("Bob", 25)  # Overrides default age
+
+# Variable-length Arguments (*args for tuple, **kwargs for dict)
+def add_numbers(*numbers):
+    return sum(numbers)
+
+print(add_numbers(10, 20, 30))  # Outputs 60
+
+# Variables: Local & Global
+# Local variables are declared inside a function and global variables are declared outside.
+
+x = "global variable"
+
+def example():
+    x = "local variable"
+    print(x)  # prints local variable
+
+example()
+print(x)  # prints global variable
+
+# Recursive Functions
+# Recursion is a function calling itself. It is useful for problems like factorial or Fibonacci series.
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  # Outputs 120
+
+# Anonymous Functions (Lambda)
+# Lambda functions are small, anonymous functions often used when a simple operation is needed quickly.
+
+# Lambda example
+multiply = lambda x, y: x * y
+print(multiply(3, 5))  # Outputs 15
+
+# Lambda with Map
+numbers = [1, 2, 3, 4]
+squares = list(map(lambda x: x ** 2, numbers))
+print(squares)  # Outputs [1, 4, 9, 16]
+
+# Lambda with Filter
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Outputs [2, 4]
+
+# Lambda with Reduce (from functools)
+from functools import reduce
+sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+print(sum_of_numbers)  # Outputs 10
