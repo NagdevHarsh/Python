@@ -1,0 +1,61 @@
+1. Class and Objects
+A class is a blueprint for creating objects, defining attributes and methods. An object is an instance of a class.
+
+Example:
+class Employee:
+    def __init__(self, name, department):
+        self.name = name
+        self.department = department
+
+emp1 = Employee("Alice", "HR")
+print(emp1.name)  # Output: Alice
+
+2. Encapsulation
+Encapsulation restricts access to certain attributes by making them private.
+
+Example:
+class Account:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
+
+    def get_balance(self):
+        return self.__balance
+
+acc = Account(5000)
+print(acc.get_balance())  # Output: 5000
+
+3. Abstraction
+Abstraction hides the internal implementation and shows only relevant details.
+
+Example:
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+class Car(Vehicle):
+    def start(self):
+        print("Car started")
+
+c = Car()
+c.start()  # Output: Car started
+
+4. Polymorphism
+Polymorphism allows the same function or method to behave differently based on the context.
+
+Example:
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(Dog())  # Output: Bark
+make_sound(Cat())  # Output: Meow
