@@ -59,3 +59,36 @@ def make_sound(animal):
 
 make_sound(Dog())  # Output: Bark
 make_sound(Cat())  # Output: Meow
+
+4. Polymorphism
+Polymorphism allows the same function or method to behave differently based on the context.
+
+Example:
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(Dog())  # Output: Bark
+make_sound(Cat())  # Output: Meow
+
+5. Inheritance
+Inheritance allows one class to inherit the attributes and methods of another class.
+
+Example:
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+dog = Dog("Buddy")
+dog.speak()  # Output: Buddy says Woof!
