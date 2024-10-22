@@ -92,3 +92,15 @@ class Dog(Animal):
 
 dog = Dog("Buddy")
 dog.speak()  # Output: Buddy says Woof!
+
+6. Static and Instance Methods
+Static methods belong to a class, while instance methods operate on objects.
+
+Example:
+class MathOperations:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(MathOperations.add(5, 3))  # Output: 8
+
