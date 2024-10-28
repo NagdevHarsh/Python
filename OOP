@@ -104,3 +104,15 @@ class MathOperations:
 
 print(MathOperations.add(5, 3))  # Output: 8
 
+7. Constructor (__init__)
+The constructor initializes object attributes.
+
+Example:
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+s = Student("John", "A")
+print(s.name)  # Output: John
+
